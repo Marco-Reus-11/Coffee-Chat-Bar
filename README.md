@@ -1,5 +1,9 @@
-# Vue 3 + Vite
+# CCB(Coffee Chat Bar)聊天软件
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+~~写在前边：鉴于本人拙劣的模仿能力，所以本次这个项目是个原创的聊天室项目（但是不排除借鉴了互联网上各位大佬的奇思妙想），那么因为是我这个半桶水弄出来的东西，所以各种莫名其妙的虫子满天飞是很正常的事情，但是能跑就行（）~~
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+前端：Vue+Router+Pinia
+
+npm run dev
+
+后端：Express+MongoDB
