@@ -2,7 +2,6 @@ const express = require("express")
 const router = express.Router()
 const Room = require("../models/Room")
 
-
 //这个是查询有没有满人，看看有无进入条件，具体退出逻辑放server.js里
 router.get("/check-room/:roomId",async(req,res)=>{
     const roomId = req.params.roomId
