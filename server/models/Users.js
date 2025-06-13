@@ -2,10 +2,12 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
     uID:String,
-    uAvatar: String,
+    uAvatar: {type:String,default:"/images/maodie.jpg"},
     uName: String,
     Password: String,
-    Friends: Object
+    Friends: [{
+      uID: String
+    }]
 })
 
 module.exports = mongoose.model("Users",userSchema)

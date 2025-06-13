@@ -1,14 +1,13 @@
 const mongoose = require("mongoose")
 
-const memberSchema = new mongoose.Schema({
-    Nickname:String,
-    Avatar:String
-})
-
 const roomSchema = new mongoose.Schema({
-    RoomID:{type:Number,required:true},
+    RoomID:{type:Number,required:true,unique:true},
     RoomName:{type:String,required:true},
-    Members:memberSchema
+    Members:[{
+        Nickname:String,
+        Avatar:String,
+        userID:String
+    }]
 })
 
 module.exports = mongoose.model("Room",roomSchema)
