@@ -132,7 +132,7 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ### AI助手
 
-![AI助手](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/%E6%9D%8E%E5%81%A5%E6%81%92/Desktop/Coffee-Chat-Bar/assets/AI%E5%8A%A9%E6%89%8B.png "AI助手")
+![AI助手](assets/AI助手.png "AI助手")
 
 ### 聊天室
 
