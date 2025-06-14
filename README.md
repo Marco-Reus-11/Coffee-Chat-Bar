@@ -4,7 +4,7 @@
 
 ---
 
-## 技术栏
+## 技术栈
 
 * **前端** ：Vue 3 + Vue Router + Pinia + Vite
 * **后端** ：Express + MongoDB + Socket.IO
@@ -14,6 +14,14 @@
 
 ## 快速启动项目
 
+### 后端启动（建议先把服务器给开了）
+
+```
+cd server
+npm install
+nodemon server.js
+```
+
 ### 前端启动
 
 ```
@@ -22,13 +30,21 @@ npm install
 npm run dev
 ```
 
-### 后端启动
+### 客户端启动
 
 ```
-cd server
-npm install
-nodemon server.js
+cd ccb
+npm run start
 ```
+
+### 桌面端安装
+
+```
+cd ccb
+npm run dist
+```
+
+(然后可以看到桌面多了一个COFFEE CHAT BAR文件夹,安装其中的exe文件即可，会自动创建快捷方式)
 
 ---
 
@@ -74,37 +90,54 @@ VITE_API_URL=http://localhost:3000
 ### 未来计划
 
 * 在 LastChats 页面增加右键菜单支持，提供“一键清空聊天记录”功能。
-* 尝试集成 AI 小助手（DS集成），暑假期间观情出版。
+* 新增用户更换头像功能
+* 将用户状态（status）转变为动态效果
+* 增加朋友圈（moments）功能
 
 ---
 
-## 心路历练（开发者碎碎念）
+## 碎碎念
 
-本项目作为阶段性学习总结产物，完成度不算高但功能已基本可用。由于个人时间和精力有限，部分功能未能如期实现。感谢一路走来的各种踩坑、学习与成长。
+本项目作为阶段性学习总结产物，完成度不算高但功能已基本可用。由于个人时间和精力有限，部分功能未能如期实现。感谢一路走来的各种踩坑、学习、踩坑与踩坑。
 
 ---
 
 ## License
 
-仅供学习与交流，禁止商用。
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
 ## 项目截图
 
-![[主页1 1.png]]
+### 主页 1
 
-![[主页3.png]]
+![主页1](assets/主页1.png "主页1")
 
-![[通讯录.png]]
+### 主页 2
 
-![[主页2.png]]
+![主页 2](assets/主页3.png "主页 2")
 
-![[登录页.png]]
+### 通讯录
 
-![[聊天室.png]]
----------------
+![通讯录](assets/通讯录.png)
+
+### 主页 3
+
+![主页 3](assets/主页2.png "主页 3")
+
+### 登录页
+
+![登录页](assets/登录页.png "登录页")
+
+### AI助手
+
+![AI助手](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/%E6%9D%8E%E5%81%A5%E6%81%92/Desktop/Coffee-Chat-Bar/assets/AI%E5%8A%A9%E6%89%8B.png "AI助手")
+
+### 聊天室
+
+![聊天室](assets/聊天室.png "聊天室")
 
 ## 最后一句
 
-**能跑，就是胜利！**
+**能跑，就是胜利！（当然也有可能是人跑了）**
