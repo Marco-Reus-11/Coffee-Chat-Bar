@@ -214,6 +214,7 @@ canvas {
   transform: translate(-50%, -50%);
   perspective: 1600px;
   z-index: 2;
+  -webkit-app-region: no-drag
 }
 
 .flipped {

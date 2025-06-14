@@ -7,7 +7,7 @@
          <!-- <router-view class="section3" v-if="showcontent" @closemessage="hidecontent"/> -->
     </div>
     <div class="container" ref="container" v-else>
-        <div class="section1"><Sidebar @showchat="handleshowchat" @showcontacts="handleshowcontacts"/></div>
+        <div class="section1"><Sidebar @showchat="handleshowchat" @showcontacts="handleshowcontacts" @todetail="showAI"/></div>
         <div class="section2" v-if="showlastchats"><LastChats  @hidechat="handlehidechat" @changecolor="setcolor" @todetail="showdetail"/></div>
         <div class="section2" v-if="showcontacts"><Contacts  @hidecontacts="handlehidecontacts" @todetail="showdetail"/></div>
         <!-- <div class="section3" v-if="show3"><Content @closemessage="handleclosemessage"/></div> -->
@@ -70,6 +70,13 @@
         router.push({
             path:"/chatdetail",
             query:{uname,img}
+        })
+    }
+
+    function showAI(){
+        showcontent.value = true
+        router.push({
+            path:"/chat-ai"
         })
     }
 
@@ -168,16 +175,18 @@
         border-radius: 0;
     }
     } */
-    @media (min-width: 1200px){
+    @media (min-width: 1300px){
     .container{
         margin: 5vh 10vw;
     }
 }
 
-/* @media (min-width: 1200px){
+@media (max-width: 1200px){
     .container{
-        padding: 5vh 10vw;
+        border-radius: 0;
     }
-} */
+    .section1{
+        border-radius: 0;
+}}
 
 </style>

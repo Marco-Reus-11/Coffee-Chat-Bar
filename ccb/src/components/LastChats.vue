@@ -256,6 +256,7 @@ onBeforeUnmount(()=>{
     white-space: wrap;
     flex-wrap: wrap;
     transition: all 1.5s ease;
+    -webkit-app-region: no-drag
 }
 
 .set_:hover{

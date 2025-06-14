@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-        <div class="logo"><img src="/images/logo.png" alt=""></div>
+        <div class="logo"><img src="/images/logo.png" alt="LOGO" title="AI智能小助手" @click="toAI"></div>
         <div class="toolbar">
             <ul>
                 <li><font-awesome-icon icon="comment" title="聊天" @click="chat"/></li>
@@ -17,9 +17,13 @@
 import {ref} from 'vue'
 import { onMounted } from 'vue'
 import axios from 'axios'   
-const emit = defineEmits(['showchat','showcontacts'])
+const emit = defineEmits(['showchat','showcontacts',"todetail"])
 
 const avatar = ref("")
+
+function toAI(){
+    emit("todetail","打开AI小助手")
+}
 
 function chat(){
     emit('showchat','打开聊天')
@@ -76,7 +80,15 @@ onMounted(async()=>{
         justify-content: flex-start;
         align-items: center;
         /* border-bottom: 1px solid red; */
+        -webkit-app-region: no-drag
     }
+
+    .logo img:hover{
+        border-radius: 50%;
+        box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+        cursor: pointer;
+    }
+
     .toolbar{
         flex:1 1 40%;
         -webkit-app-region: no-drag
@@ -158,5 +170,15 @@ onMounted(async()=>{
 
     .avatar:hover::after{
         opacity: 1;
+    }
+
+    @media(min-width:1300px) {
+        .sidebar{
+            border-radius: 0;
+        }
+
+        .logo img{
+            border-radius: 0;
+        }
     }
 </style>

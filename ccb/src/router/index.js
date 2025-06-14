@@ -1,12 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Login from '../components/Login.vue'
 import ChatView from '../components/ChatView.vue'
 import ChatBox from '../components/ChatBox.vue'
-import ChatHall from '../components/ChatHall.vue'
-import ChatRoom from '../components/ChatRoom.vue'
-
-import Content from '../view/Content.vue'
-
-import Login from '../components/Login.vue'
+import ChatHall from '../views/ChatHall.vue'
+import ChatRoom from '../views/ChatRoom.vue'
+import Content from '../views/Content.vue'
+import Assistant from '../views/Assistant.vue'
 
 const routes = [
   { path: '/',
@@ -14,7 +13,12 @@ const routes = [
     children:[{
       path:"/chatdetail",
       component:Content
-    }],
+    },
+      {
+    path:"/chat-ai",
+    component:Assistant
+  }
+  ],
     meta:{requiresAuth:true}
   },
   { path: '/chatbox', 
@@ -40,6 +44,7 @@ const routes = [
     path:"/login",
     component:Login
   },
+
   {
     path: '/:catchAll(.*)',  // 通配符路由,如果访问错误url,自动重定向到主页
     redirect: '/'
